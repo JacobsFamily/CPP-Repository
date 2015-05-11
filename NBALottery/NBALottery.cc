@@ -15,11 +15,12 @@
 using namespace std;
 
 
-int main() {
+int main() 
+{
 
 	const int maxrange=14;
 	const int numdraws=3;
-    int count=0;
+        int count=0;
 	NBALottery::Machine machine;
 	std::vector < NBALottery::Quadruplet > drawings;
 	int wins[maxrange] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0};
@@ -124,21 +125,21 @@ int main() {
 	for (int m=0;m<numdraws;m++)
 	{
 
-      machine.draw(drawings[m]);
+            machine.draw(drawings[m]);
 
-      for(int i=0;i<4;i++)
-	  {
+            for(int i=0;i<4;i++)
+	    {
 		  //cout << "draw["<<i<<"]= " << drawings[m].num[i] << endl;
-	  }
+	    }
 
-      for(int i=0;i<maxrange;i++)
-      {
-        if(lotteryTeams[i].match(drawings[m]))
-        {
+            for(int i=0;i<maxrange;i++)
+            {
+              if(lotteryTeams[i].match(drawings[m]))
+              {
         	//cout << endl << "Team[" << i+1 << "] just won the lottery" << endl << endl;
         	(wins[i])++;
-        }
-      }
+              }
+            }
 
 	}
 
