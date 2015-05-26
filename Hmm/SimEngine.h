@@ -11,6 +11,8 @@ class SimEngine
     collide(Ball& thisBall, Ball& thatBall);
     bounce(Ball& ball, Wall& wall);
   private:
-    std::vector <Force> forces;
+    Force netForce;
+    double dt;
+    
 };
 #endif
