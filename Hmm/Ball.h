@@ -12,21 +12,21 @@
 	struct Ball
 	{
 		Ball(int inNum,
-		     double inMass,
-		     Vec inPos,
-		     Vec inVel);
+				double inMass,
+				Vec inPos,
+				Vec inVel);
 		Ball(int inNum,
-		     double inMass,
-		     double inX,
-		     double inY,
-		     double inZ,
-		     double inVX,
-	             double inVY,
-	             double inVZ);
+			double inMass,
+			double inX,
+			double inY,
+			double inZ,
+			double inVX,
+			double inVY,
+			double inVZ);
 		int Num;
-                Vec pos;
-                Vec vel;
-                double mass;
+        Vec pos;
+        Vec vel;
+        double mass;
 	};
 
 

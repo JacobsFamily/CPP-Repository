@@ -1,18 +1,32 @@
+/*
+ * SimEngine.h
+ *
+ *  Created on: May 26, 2015
+ *      Author: owner
+ */
+
 #ifndef SIMENGINE_H_
 #define SIMENGINE_H_
+
 #include "Force.h"
 #include "Ball.h"
-#include "Wall.h"
+#include <vector>
 
 class SimEngine
 {
   public:
-    propagate(std::vector <Ball&> objects);
-    collide(Ball& thisBall, Ball& thatBall);
-    bounce(Ball& ball, Wall& wall);
+	SimEngine(double startTime, double endTime, double step, const std::vector<Force> forces);
+	~SimEngine();
+    void propagate(std::vector<Ball> &objects);
+    void collide(Ball& thisBall, Ball& thatBall);
   private:
-    Force netForce;
     double dt;
-    
+    double t0;
+    double tf;
+    double t;
+    Force netForce;
 };
-#endif
+
+
+
+#endif /* SIMENGINE_H_ */
