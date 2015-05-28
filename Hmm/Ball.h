@@ -11,10 +11,11 @@
 
 	struct Ball
 	{
+		Ball();
 		Ball(int inNum,
-				double inMass,
-				Vec inPos,
-				Vec inVel);
+						double inMass,
+						Vec inPos,
+						Vec inVel);
 		Ball(int inNum,
 			double inMass,
 			double inX,

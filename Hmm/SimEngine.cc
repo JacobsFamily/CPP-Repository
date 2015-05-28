@@ -28,6 +28,9 @@ SimEngine::SimEngine(double startTime, double endTime, double step, const std::v
    }
    netForce = Force(sqrt(tempMag),tempVec.unit());
 }
+SimEngine::~SimEngine()
+{}
+
 void SimEngine::propagate(std::vector<Ball> &objects)
 {
   while(t < tf)
