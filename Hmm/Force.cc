@@ -6,8 +6,8 @@
  */
 #include "Force.h"
 
-Force::Force(double mag, Vec dir):
-  magnitude(mag),
-  unitDirection(dir.unit())
+Force::Force(double mag, Vec dir)
+      :magnitude(mag),
+      unitDirection(dir.unit())
 {
 }
