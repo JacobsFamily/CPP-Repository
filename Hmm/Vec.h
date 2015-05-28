@@ -9,17 +9,19 @@
 #define VEC_H_
 
 
-  struct Vec
-  {
-	  Vec(double inX,double inY,double inZ);
-	  Vec (const Vec& inVec);
-	  double length();
-	  Vec unit();
-	  ~Vec(){};
-	  double x;
-	  double y;
-	  double z;
-  };
+struct Vec
+{
+   Vec(double inX,double inY,double inZ);
+   Vec(const Vec& inVec);
+  ~Vec();
+	  
+   double length();
+   Vec unit();
+	  
+   double x;
+   double y;
+   double z;
+};
 
 
 
