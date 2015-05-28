@@ -10,24 +10,25 @@
 #include <iomanip>
 #include <cmath>
 
-SimEngine::SimEngine(double startTime, double endTime, double step, const std::vector<Force> forces):
-  t0(startTime),
-  tf(endTime),
-  dt(step),
-  t(startTime),
-  netForce(Force(1.0,Vec(1.0,1.0,1.0)))
+SimEngine::SimEngine(double startTime, double endTime, double step, const std::vector<Force> forces)
+          :t0(startTime),
+           tf(endTime),
+           dt(step),
+           t(startTime),
+           netForce(Force(1.0,Vec(1.0,1.0,1.0)))
 {
    Vec tempVec(0.,0.,0.);
    double tempMag = 0.0;
    for (int i=0;i< forces.size(); i++)
    {
-	   tempVec.x += forces[i].unitDirection.x;
-	   tempVec.y += forces[i].unitDirection.y;
-	   tempVec.z += forces[i].unitDirection.z;
-	   tempMag += forces[i].magnitude*forces[i].magnitude;
+       tempVec.x += forces[i].unitDirection.x;
+       tempVec.y += forces[i].unitDirection.y;
+       tempVec.z += forces[i].unitDirection.z;
+       tempMag += forces[i].magnitude*forces[i].magnitude;
    }
    netForce = Force(sqrt(tempMag),tempVec.unit());
 }
+
 SimEngine::~SimEngine()
 {}
 
