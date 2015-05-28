@@ -15,10 +15,11 @@
 class SimEngine
 {
   public:
-	SimEngine(double startTime, double endTime, double step, const std::vector<Force> forces);
-	~SimEngine();
+    SimEngine(double startTime, double endTime, double step, const std::vector<Force> forces);
+    ~SimEngine();
     void propagate(std::vector<Ball> &objects);
     void collide(Ball& thisBall, Ball& thatBall);
+    
   private:
     double dt;
     double t0;
