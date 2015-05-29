@@ -40,15 +40,15 @@ void SimEngine::propagate(std::vector<Ball> &objects)
     {
       //check if past wall; if so, perform perfect reflection in the affected coordinate
       //Boundaries are hard-coded for now
-      if(objects[i].pos.x > 100.0 or objects[i].pos.x < 0.0)
+      if(objects[i].pos.x > 100.0 || objects[i].pos.x < 0.0)
       {
     	  objects[i].vel.x = -objects[i].vel.x;
       }
-      if(objects[i].pos.y > 100.0 or objects[i].pos.y < 0.0)
+      if(objects[i].pos.y > 100.0 || objects[i].pos.y < 0.0)
       {
     	  objects[i].vel.y = -objects[i].vel.y;
       }
-      if(objects[i].pos.z > 100.0 or objects[i].pos.z < 0.0)
+      if(objects[i].pos.z > 100.0 || objects[i].pos.z < 0.0)
       {
     	  objects[i].vel.z = -objects[i].vel.z;
       }
