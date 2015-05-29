@@ -21,9 +21,10 @@ class SimEngine
     void collide(Ball& thisBall, Ball& thatBall);
     
   private:
-    double dt;
+
     double t0;
     double tf;
+    double dt;
     double t;
     Force netForce;
 };
