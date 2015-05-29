@@ -20,6 +20,9 @@ Vec::Vec(const Vec& inVec)
      z(inVec.z)
 {}
 
+Vec::~Vec()
+{}
+
 double Vec::length()
 {
    return sqrt(x*x + y*y + z*z);
